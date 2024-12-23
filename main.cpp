@@ -30,9 +30,32 @@ int main() {
         cout << "5 Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
+        switch (choice) {
+            case 1:
+                createItem(items);
+                break;
+            case 2:
+                readItems(items);
+                break;
+            case 3:
+                updateItem(items);
+                break;
+            case 4:
+                deleteItem(items);
+                break;
+            case 5:
+                cout << "Exiting the program.\n";
+                break;
+            default:
+                cout << "invalid choice. please try again.\n";
+        }
+    } while (choice != 5);
+    return 0;
 
-    }
-}
 
-}
-}
+
+
+
+
+
+
