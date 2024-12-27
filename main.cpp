@@ -5,7 +5,7 @@
 using namespace std;
 struct Item {
     int id;
-    int name;
+    string name;
     double price;
     void display() const {
         cout << "ID: " << id << ", Name :" << name << ", price: $" << price << endl;
@@ -53,9 +53,17 @@ int main() {
     return 0;
 }
 
+void createItem(vector<Item>& items) {
+    Item newItem;
 
+    cout << "\nEnter Item ID: ";
+    cin >> newItem.id;
+    cin.ignore();
+    cout << "Enter Item Name; ";
+    getline(cin,newItem.name);
+    cout << "Enter Item price: ";
+    cin >> newItem.price;
 
-
-
-
-
+    items.push_back(newItem);
+    cout << "Item created successfully!\n";
+}
