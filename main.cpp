@@ -77,3 +77,21 @@ void readItems(const vector<Item>& items) {
         }
     }
 }
+void updateItem(vetor<Item>& items) {
+    int id;
+    cout << "\nEnter Item ID to update: ";
+    cin >> id;
+
+    for (auto& item : items) {
+        if (item.id == id) {
+            cin.ignore();
+            cout << "\nEnter new Item Name: ";
+            getline(cin, Item.name);
+            cout <<"Enter nwe Item Price:";
+            cin >> item.price;
+            cout << "Item updated successfully!\n";
+            return;
+        }
+    }
+    cout << "Item with ID " << id << "
+}
