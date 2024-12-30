@@ -77,7 +77,7 @@ void readItems(const vector<Item>& items) {
         }
     }
 }
-void updateItem(vetor<Item>& items) {
+void updateItem(vector<Item>& items) {
     int id;
     cout << "\nEnter Item ID to update: ";
     cin >> id;
@@ -86,12 +86,12 @@ void updateItem(vetor<Item>& items) {
         if (item.id == id) {
             cin.ignore();
             cout << "\nEnter new Item Name: ";
-            getline(cin, Item.name);
+            getline(cin, item.name);
             cout <<"Enter nwe Item Price:";
             cin >> item.price;
             cout << "Item updated successfully!\n";
             return;
         }
     }
-    cout << "Item with ID " << id << "
+    cout << "Item with ID " << id <<"not found.\n";
 }
