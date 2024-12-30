@@ -68,11 +68,11 @@ void createItem(vector<Item>& items) {
     cout << "Item created successfully!\n";
 }
 void readItems(const vector<Item>& items) {
-     if (items.empty()) {
-         cout << "\nNo items found.\n";
-     }else {
+    if (items.empty()) {
+        cout << "\nNo items found.\n";
+    } else {
         cout << "\n--- Item List ---\n";
-        for (const auto&  : items) {
+        for (const auto &item: items) {
             item.display();
         }
     }
