@@ -96,7 +96,17 @@ void updateItem(vector<Item>& items) {
     cout << "Item with ID " << id <<"not found.\n";
 }
 void deleteItem(vector<Item>& items) {
-int id;
-cout << "\nEnter Item ID to delete: ";
-cin >> id;
+    int id;
+    cout << "\nEnter Item ID to delete: ";
+    cin >> id;
+    for (auto it = items.begin(); it != items.end(); ++it) {
+        if (it->id == id) {
+            items.erase(it);
+            cout << "Item deleted successfully!\n";
+            return;
+        }
+    }
+    cout << "Item with ID " << id << " not found.\n";
+}
+
 }
