@@ -95,3 +95,6 @@ void updateItem(vector<Item>& items) {
     }
     cout << "Item with ID " << id <<"not found.\n";
 }
+void deleteItem(vector<Item>& items) {
+
+}
