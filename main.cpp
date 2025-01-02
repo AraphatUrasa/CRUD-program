@@ -3,7 +3,7 @@
 #include <vector>
 
 using namespace std;
-
+//an object
 struct Item {
     int id;
     string name;
@@ -54,7 +54,7 @@ int main() {
 
     return 0;
 }
-
+//createItem function 
 void createItem(vector<Item>& items) {
     Item newItem;
 
@@ -69,7 +69,7 @@ void createItem(vector<Item>& items) {
     items.push_back(newItem);
     cout << "Item created successfully!\n";
 }
-
+//readItems function
 void readItems(const vector<Item>& items) {
     if (items.empty()) {
         cout << "\nNo items found.\n";
@@ -80,7 +80,7 @@ void readItems(const vector<Item>& items) {
         }
     }
 }
-
+//updateItem function 
 void updateItem(vector<Item>& items) {
     int id;
     cout << "\nEnter Item ID to update: ";
@@ -99,7 +99,7 @@ void updateItem(vector<Item>& items) {
     }
     cout << "Item with ID " << id << " not found.\n";
 }
-
+//implementing the deleteItem function
 void deleteItem(vector<Item>& items) {
     int id;
     cout << "\nEnter Item ID to delete: ";
