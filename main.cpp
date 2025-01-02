@@ -3,12 +3,13 @@
 #include <vector>
 
 using namespace std;
+
 struct Item {
     int id;
     string name;
     double price;
     void display() const {
-        cout << "ID: " << id << ", Name :" << name << ", price: $" << price << endl;
+        cout << "ID: " << id << ", Name: " << name << ", price: $" << price << endl;
     }
 };
 
@@ -47,9 +48,10 @@ int main() {
                 cout << "Exiting the program.\n";
                 break;
             default:
-                cout << "invalid choice. please try again.\n";
+                cout << "Invalid choice. Please try again.\n";
         }
     } while (choice != 5);
+
     return 0;
 }
 
@@ -59,24 +61,26 @@ void createItem(vector<Item>& items) {
     cout << "\nEnter Item ID: ";
     cin >> newItem.id;
     cin.ignore();
-    cout << "Enter Item Name; ";
-    getline(cin,newItem.name);
+    cout << "Enter Item Name: ";
+    getline(cin, newItem.name);
     cout << "Enter Item price: ";
     cin >> newItem.price;
 
     items.push_back(newItem);
     cout << "Item created successfully!\n";
 }
+
 void readItems(const vector<Item>& items) {
     if (items.empty()) {
         cout << "\nNo items found.\n";
     } else {
         cout << "\n--- Item List ---\n";
-        for (const auto &item: items) {
+        for (const auto& item : items) {
             item.display();
         }
     }
 }
+
 void updateItem(vector<Item>& items) {
     int id;
     cout << "\nEnter Item ID to update: ";
@@ -87,14 +91,15 @@ void updateItem(vector<Item>& items) {
             cin.ignore();
             cout << "\nEnter new Item Name: ";
             getline(cin, item.name);
-            cout <<"Enter nwe Item Price:";
+            cout << "Enter new Item Price: ";
             cin >> item.price;
             cout << "Item updated successfully!\n";
             return;
         }
     }
-    cout << "Item with ID " << id <<"not found.\n";
+    cout << "Item with ID " << id << " not found.\n";
 }
+
 void deleteItem(vector<Item>& items) {
     int id;
     cout << "\nEnter Item ID to delete: ";
@@ -107,6 +112,4 @@ void deleteItem(vector<Item>& items) {
         }
     }
     cout << "Item with ID " << id << " not found.\n";
-}
-
 }
